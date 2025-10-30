@@ -1,0 +1,64 @@
+/* Custom CSS for Shein Sana'a Project */
+
+/* Import a suitable Arabic font (e.g., Cairo from Google Fonts) */
+/* Since we can't directly link external resources in the sandbox, we'll rely on system fonts, 
+   but this comment indicates the best practice for a real-world deployment. */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap'); */
+
+body {
+    /* Fallback to system Arabic fonts */
+    font-family: 'Cairo', 'Arial', sans-serif; 
+    direction: rtl;
+    text-align: right;
+}
+
+/* Ensure the main container respects RTL */
+.container {
+    text-align: right;
+}
+
+/* Navigation adjustments for RTL */
+.nav-links a {
+    margin-left: 20px; /* Use margin-left for spacing in RTL */
+    margin-right: 0;
+}
+
+/* Product grid adjustments for RTL */
+.product-info {
+    text-align: right;
+}
+
+.original-price {
+    margin-right: 10px; /* Adjust margin for original price in RTL */
+    margin-left: 0;
+}
+
+/* Step grid adjustments for RTL */
+.steps-grid {
+    flex-direction: row-reverse; /* Steps flow from right to left */
+}
+
+/* Responsive adjustments for RTL */
+@media (max-width: 768px) {
+    .navbar {
+        align-items: flex-end; /* Align items to the right in mobile view */
+    }
+
+    .nav-links {
+        align-items: flex-end;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Additional styling for the Hero section background image */
+.hero {
+    /* Placeholder for the hero image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Shein+Sana%27a+Hero+Image');
+    background-size: cover;
+    background-position: center;
+}
